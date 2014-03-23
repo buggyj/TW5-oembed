@@ -1,0 +1,27 @@
+{
+	"tiddlers": [
+		{
+			"file": "jquery.min.js",
+			"fields": {
+				"type": "application/javascript",
+				"title": "$:/plugins/bj/oembed/jquery.min.js",
+				"module-type": "library"
+			}
+		},
+		{
+			"file": "Motovun Jack.svg",
+			"fields": {
+				"type": "img/svg+xml",
+				"title": "$:/plugins/bj/oembed/error"		
+			}
+		},
+		{
+			"file": "jquery.oembed.min.js",
+			"fields": {
+				"type": "application/javascript",
+				"title": "$:/plugins/bj/oembed/jquery.oembed.min.js",
+				"module-type": "library"
+			}
+		}
+	]
+}

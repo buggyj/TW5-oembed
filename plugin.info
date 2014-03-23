@@ -1,0 +1,9 @@
+{
+	"title": "$:/plugins/bj/oembed",
+	"description": "embed object from well know sites",
+	"author": "JeffreyWilkinson",
+	"core-version": ">=5.0.8",
+	"version": "0.0.6",
+	"source": "https://github.com/buggyj/TW5-oembed",
+	"plugin-type": "plugin"
+}
