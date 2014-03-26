@@ -17,22 +17,21 @@ if($tw.browser) {
 	require("$:/plugins/bj/oembed/jquery.oembed.min.js");
 }
 	
-	/*
-	try {
-	 defaults=$tw.wiki.getTiddlerData("$:/plugins/bj/oembed/options.json");
-	} catch(e){
-		alert("invalid format: oembed options ");
-		defaults={};
-	}
-*/
+
+
  var erroFrame ='<div class="embeddedContent"><iframe allowfullscreen="true"'+
 						 'height="349" src='+"'"+ 'data:text/html,<html><body>'+
 						 $tw.wiki.getTiddlerText("$:/plugins/bj/oembed/error")+'</html></body>'+"'"+
 						 ' style="" width="425"></iframe></div>';
 var CloudWidget = function(parseTreeNode,options) {
 	this.initialise(parseTreeNode,options);
-	this.defaults ={noVimeo:"noVimeo", myError:"error"};
-	this.errorframe =
+	try {
+	    this.defaultvalues=$tw.wiki.getTiddlerData("$:/plugins/bj/oembed/options.json")||{};
+	} catch(e){
+		alert("invalid format: oembed options ");
+		this.defaultvalues={};
+	}
+	this.defaults ={noVimeo:"noVimeo", myError:"error"}; 
 	this.maxWidth ='560';
 	this.maxHeight = '315';
 	this.responsiveResize = 'responsive';
@@ -100,6 +99,9 @@ Compute the internal state of the widget
 CloudWidget.prototype.execute = function() {
 	// Get the parameters from the attributes
 	this.url = this.getAttribute("url");
+	this.maxWidth = this.getAttribute("maxWidth",this.defaultvalues.maxWidth);
+	this.maxHeight = this.getAttribute("maxHeight",this.defaultvalues.maxHeight);
+	this.responsiveResize=this.getAttribute("responsiveResize",this.defaultvalues.responsiveResize);
 };
 
 /*

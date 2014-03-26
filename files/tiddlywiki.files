@@ -1,6 +1,14 @@
 {
 	"tiddlers": [
 		{
+			"file": "options.json",
+			"fields": {
+				"type": "application/json",
+				"title": "$:/plugins/bj/oembed/options.json",
+				"module-type": "library"
+			}
+		},
+		{
 			"file": "jquery.min.js",
 			"fields": {
 				"type": "application/javascript",
